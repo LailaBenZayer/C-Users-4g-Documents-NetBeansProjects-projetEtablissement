@@ -14,7 +14,7 @@
       <AnchorPane layoutX="525.0" layoutY="66.0" prefHeight="355.0" prefWidth="282.0" style="-fx-background-color: linear-gradient(#2D3447,lightgray);">
          <children>
             <JFXTextField alignment="BOTTOM_RIGHT" focusColor="#2d3447" layoutX="34.0" layoutY="107.0" prefHeight="27.0" prefWidth="214.0" promptText="البريد الالكتروني" unFocusColor="#c9bfbf" />
-            <JFXPasswordField alignment="BOTTOM_RIGHT" focusColor="#247721" layoutX="34.0" layoutY="192.0" prefHeight="25.0" prefWidth="214.0" promptText="كلمة المرور" unFocusColor="#c9bcbc" />
+            <JFXPasswordField alignment="BOTTOM_RIGHT" focusColor="#2d3447" layoutX="34.0" layoutY="192.0" prefHeight="25.0" prefWidth="214.0" promptText="كلمة المرور" unFocusColor="#c9bcbc" />
             <JFXButton layoutX="34.0" layoutY="265.0" prefHeight="25.0" prefWidth="214.0" style="-fx-background-color: gray;" textFill="#d2cece" />
             <Label layoutX="70.0" layoutY="33.0" text="تسجيل الدخول " textFill="#b5b3b3">
                <font>
@@ -25,8 +25,8 @@
       </AnchorPane>
       <ImageView fitHeight="345.0" fitWidth="506.0" layoutX="15.0" layoutY="66.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
          <image>
+            <!--<Image url="@../../../../../Desktop/etab.jpg" />-->
             <Image url="@../../../../../Desktop/etab.jpg" />
-            <!--<Image url="projetEtablissement/Source Packages/images/etab.jpg" />-->
          </image>
       </ImageView>
       <Label layoutX="68.0" layoutY="107.0" text="مرحبا بكم في هذا التطبيق " textFill="#fbf6f6">
