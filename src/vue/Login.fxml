@@ -15,7 +15,7 @@
          <children>
             <JFXTextField alignment="BOTTOM_RIGHT" focusColor="#2d3447" layoutX="34.0" layoutY="107.0" prefHeight="27.0" prefWidth="214.0" promptText="البريد الالكتروني" unFocusColor="#c9bfbf" />
             <JFXPasswordField alignment="BOTTOM_RIGHT" focusColor="#2d3447" layoutX="34.0" layoutY="192.0" prefHeight="25.0" prefWidth="214.0" promptText="كلمة المرور" unFocusColor="#c9bcbc" />
-            <JFXButton layoutX="34.0" layoutY="265.0" prefHeight="25.0" prefWidth="214.0" style="-fx-background-color: gray;" textFill="#d2cece" />
+            <JFXButton layoutX="34.0" layoutY="265.0" prefHeight="25.0" prefWidth="214.0" style="-fx-background-color: gray;" text="الدخول" textFill="#d2cece" />
             <Label layoutX="70.0" layoutY="33.0" text="تسجيل الدخول " textFill="#b5b3b3">
                <font>
                   <Font size="20.0" />
@@ -41,10 +41,5 @@
       </Label>
       <Label layoutX="105.0" layoutY="320.0" text=" #9C2B27" />
       <Label layoutX="200.0" layoutY="320.0" text=" #E45652" />
-      <Label layoutX="778.0" text="×" textFill="#f2ecec">
-         <font>
-            <Font size="41.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
