@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="486.0" prefWidth="821.0" style="-fx-background-color: #201;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <AnchorPane layoutX="525.0" layoutY="66.0" prefHeight="355.0" prefWidth="282.0" style="-fx-background-color: linear-gradient(#2D3447,lightgray);">
+         <children>
+            <JFXTextField alignment="BOTTOM_RIGHT" focusColor="#369a51" layoutX="34.0" layoutY="107.0" prefHeight="27.0" prefWidth="214.0" promptText="البريد الالكتروني" unFocusColor="#c9bfbf" />
+            <JFXPasswordField alignment="BOTTOM_RIGHT" focusColor="#247721" layoutX="34.0" layoutY="192.0" prefHeight="25.0" prefWidth="214.0" promptText="كلمة المرور" unFocusColor="#c9bcbc" />
+            <JFXButton layoutX="34.0" layoutY="265.0" prefHeight="25.0" prefWidth="214.0" style="-fx-background-color: gray;" textFill="#d2cece" />
+            <Label layoutX="70.0" layoutY="33.0" text="تسجيل الدخول " textFill="#b5b3b3">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="343.0" fitWidth="483.0" layoutX="14.0" layoutY="76.0" opacity="0.3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <!--<Image url="@../../../../../Desktop/etab.jpg" />-->
+            <!--<Image url="projetEtablissement\Src\images\etab.jpg" />-->
+         </image>
+      </ImageView>
+      <Label layoutX="68.0" layoutY="107.0" text="مرحبا بكم في هذا التطبيق " textFill="#fbf6f6">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="201.0" prefHeight="19.0" prefWidth="227.0" text="تطبيق لإدارة مؤسستك بامتياز" textFill="#d0cbcb">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="105.0" layoutY="320.0" text=" #9C2B27" />
+      <Label layoutX="200.0" layoutY="320.0" text=" #E45652" />
+      <Label layoutX="778.0" text="×" textFill="#f2ecec">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

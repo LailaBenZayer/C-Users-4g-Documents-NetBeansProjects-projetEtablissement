@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EtudiantController">
+   <left>
+      <VBox prefHeight="463.0" prefWidth="11.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <VBox prefHeight="511.0" prefWidth="505.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="179.0" prefWidth="501.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="الاسم :" GridPane.columnIndex="2">
+                     <GridPane.margin>
+                        <Insets left="100.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="344.0" layoutY="13.0" text="اللقب :" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="100.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="344.0" layoutY="35.0" text="تاريخ الازدياد :" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="67.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="344.0" layoutY="35.0" text="مكان الازدياد :" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="67.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="344.0" layoutY="35.0" text="الرقم الوطني :" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="67.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="344.0" layoutY="101.0" text="المستوى التعليمي :" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="38.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="nom" alignment="BOTTOM_RIGHT" promptText="الاسم " GridPane.columnIndex="1" />
+                  <TextField fx:id="prenom" alignment="BOTTOM_RIGHT" layoutX="177.0" layoutY="9.0" promptText="اللقب " GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="lieuNaissance" alignment="BOTTOM_RIGHT" layoutX="177.0" layoutY="31.0" promptText="مكان الازدياد " GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="codeNational" alignment="BOTTOM_RIGHT" layoutX="177.0" layoutY="75.0" promptText="الرقم الوطني " GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="niveauEtud" alignment="BOTTOM_RIGHT" layoutX="177.0" layoutY="97.0" prefHeight="49.0" prefWidth="167.0" promptText="المستوى التعليمي" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <DatePicker fx:id="dateNais" promptText="../../...." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="saveAction" mnemonicParsing="false" onAction="#saveAction" prefHeight="25.0" prefWidth="102.0" text="اضافة" GridPane.rowIndex="1" />
+                  <Button fx:id="update" layoutX="10.0" layoutY="42.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="102.0" text="تعديل" GridPane.rowIndex="2" />
+                  <Button fx:id="delete" layoutX="10.0" layoutY="42.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="102.0" text="مسح" GridPane.rowIndex="3" />
+                  <Label text="المؤسسة التعليمية :" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="45.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox fx:id="cmbEtab" prefHeight="25.0" prefWidth="211.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+            <TableView fx:id="etudiants" nodeOrientation="RIGHT_TO_LEFT" prefHeight="271.0" prefWidth="501.0">
+              <columns>
+                <TableColumn fx:id="cNom" prefWidth="95.0" text="الاسم " />
+                <TableColumn fx:id="cPrenom" prefWidth="71.0" text="اللقب " />
+                  <TableColumn fx:id="cDateNaissance" prefWidth="89.0" text="تاريخ الازدياد " />
+                  <TableColumn fx:id="cLieuNaissnace" prefWidth="82.33331298828125" text="مكان الازدياد " />
+                  <TableColumn fx:id="cCodeNational" prefWidth="98.0" text="الرقم الوطني " />
+                  <TableColumn fx:id="cNiveauEtude" prefWidth="118.66665649414062" text="المستوى التعليمي " />
+                  <TableColumn fx:id="cEtab" prefWidth="118.66665649414062" text="المؤسسة التعليمية " />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="463.0" prefWidth="8.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <VBox prefHeight="51.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="ادارة المتمدرسين" textFill="#e01414">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="200.0" right="30.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
