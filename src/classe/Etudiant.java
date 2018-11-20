@@ -55,6 +55,13 @@ public class Etudiant {
         this.etablissement = etablissement;
     }
 
+    public Etudiant(int id, String Nom, String prenom, Date dtaeNaissnace) {
+        this.id = id;
+        this.Nom = Nom;
+        this.prenom = prenom;
+        this.dtaeNaissnace = dtaeNaissnace;
+    }
+
     
 
     public int getId() {

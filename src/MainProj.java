@@ -20,7 +20,7 @@ public class MainProj extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("vue/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("vue/ImporterFichierExcel.fxml"));
 
         Scene scene = new Scene(root);
 

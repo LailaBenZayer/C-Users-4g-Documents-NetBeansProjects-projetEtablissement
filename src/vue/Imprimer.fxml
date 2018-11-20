@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ImprimerController">
+   <top>
+      <VBox prefHeight="51.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <VBox prefHeight="349.0" prefWidth="83.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.66668701171875" minWidth="10.0" prefWidth="255.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="187.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="nom" onKeyReleased="#findEtudiant" />
+                  <JFXTextField fx:id="prenom" layoutX="231.0" layoutY="13.0" onKeyReleased="#findEtudiant" GridPane.rowIndex="1" />
+                  <Label text="الاسم :" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="140.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="231.0" layoutY="17.0" text="اللقب :" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="140.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <TableView fx:id="etudiants" nodeOrientation="RIGHT_TO_LEFT" prefHeight="152.0" prefWidth="442.0">
+              <columns>
+                <TableColumn fx:id="cNom" prefWidth="75.0" text="الاسم" />
+                <TableColumn fx:id="cPrenom" prefWidth="75.0" text="اللقب" />
+                  <TableColumn fx:id="cDateNaissance" prefWidth="134.33331298828125" text="تاريخ الازدياد" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="349.0" prefWidth="75.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

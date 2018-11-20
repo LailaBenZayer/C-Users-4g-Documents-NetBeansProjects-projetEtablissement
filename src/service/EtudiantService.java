@@ -6,6 +6,7 @@
 package service;
 
 
+import classe.Employe;
 import classe.Etudiant;
 import dao.IDao;
 import java.util.List;
@@ -116,6 +117,15 @@ public class EtudiantService implements IDao<Etudiant>{
             return m;
         }
 
+    }
+    
+    public Etudiant findByNomAndPrenom(String nom,String prenom) {
+        Etudiant c = null;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        c = (Etudiant) session.createQuery("from Employe where nom = ? and prenom=?").setParameter(0, nom).setParameter(1, prenom).uniqueResult();
+        session.getTransaction().commit();
+        return c;
     }
     
 }

@@ -116,4 +116,13 @@ public class EmployeService implements IDao<Employe>{
         }
     }
     
+     public Employe findByEmail(String email) {
+        Employe c = null;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        c = (Employe) session.createQuery("from Employe where email = ?").setParameter(0, email).uniqueResult();
+        session.getTransaction().commit();
+        return c;
+    }
+    
 }

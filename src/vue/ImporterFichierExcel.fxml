@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ImporterFichierExcelController">
+   <top>
+      <VBox prefHeight="58.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <VBox prefHeight="342.0" prefWidth="79.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <VBox prefHeight="342.0" prefWidth="438.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btn1" onAction="#Button1Action" prefHeight="25.0" prefWidth="111.0" text="Select One File" />
+            <JFXButton fx:id="btn2" layoutX="10.0" layoutY="10.0" onAction="#Button2Action" prefHeight="25.0" prefWidth="111.0" text="Select Multi File" />
+            <JFXListView fx:id="listView" prefHeight="269.0" prefWidth="452.0" />
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="342.0" prefWidth="69.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
